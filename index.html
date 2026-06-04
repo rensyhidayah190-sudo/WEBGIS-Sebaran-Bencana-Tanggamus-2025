@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>WebGIS Sebaran Bencana Tanggamus</title>
+
+  <!-- LEAFLET -->
+
+  <link rel="stylesheet"
+  href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#f2f2f2;
+    }
+
+    /* ================= HEADER ================= */
+
+    header{
+
+      width:100%;
+      background:linear-gradient(to right,#990000,#ff1a1a);
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+
+      padding:12px 60px;
+
+      position:sticky;
+      top:0;
+      z-index:999;
+
+    }
+
+    .logo-area{
+
+      display:flex;
+      align-items:center;
+      gap:12px;
+
+    }
+
+    .logo-area img{
+
+      width:50px;
+      height:50px;
+      object-fit:cover;
+
+    }
+
+    .logo-text{
+
+      color:white;
+      font-size:12px;
+      font-weight:bold;
+      line-height:1.5;
+
+    }
+
+    nav ul{
+
+      display:flex;
+      list-style:none;
+      gap:40px;
+
+    }
+
+    nav ul li a{
+
+      text-decoration:none;
+      color:white;
+      font-weight:bold;
+      transition:0.3s;
+
+    }
+
+    nav ul li a:hover{
+
+      color:yellow;
+
+    }
+
+    /* ================= BANNER ================= */
+
+    .banner{
+
+      width:100%;
+      height:520px;
+
+      background-image:url('img/banner home.png');
+
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+
+    }
+
+    /* ================= PROFIL ================= */
+
+    .profil{
+
+      background:white;
+      padding:70px;
+
+    }
+
+    .profil-container{
+
+      display:flex;
+      align-items:center;
+      gap:40px;
+
+    }
+
+    .profil-container img{
+
+      width:350px;
+      border-radius:20px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.2);
+
+    }
+
+    .profil-text h2{
+
+      color:#b30000;
+      font-size:35px;
+      margin-bottom:20px;
+
+    }
+
+    .profil-text p{
+
+      color:#444;
+      line-height:2;
+      text-align:justify;
+
+    }
+
+    .btn{
+
+      display:inline-block;
+      margin-top:20px;
+
+      background:#a30000;
+      color:white;
+
+      padding:12px 30px;
+
+      text-decoration:none;
+      border-radius:50px;
+
+      font-weight:bold;
+
+      transition:0.3s;
+
+    }
+
+    .btn:hover{
+
+      background:red;
+
+    }
+
+    /* ================= BENCANA ================= */
+
+    .bencana{
+
+      padding:70px;
+
+      background:linear-gradient(to right,#7a0000,#ff3b3b);
+
+    }
+
+    .card-container{
+
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+      gap:25px;
+
+    }
+
+    .card{
+
+      background:rgba(255,255,255,0.15);
+
+      border-radius:20px;
+
+      overflow:hidden;
+
+      border:2px solid rgba(255,255,255,0.2);
+
+      box-shadow:0 5px 15px rgba(0,0,0,0.2);
+
+      transition:0.3s;
+
+      backdrop-filter:blur(4px);
+
+    }
+
+    .card:hover{
+
+      transform:translateY(-10px);
+
+    }
+
+    .card img{
+
+      width:100%;
+      height:170px;
+
+      object-fit:cover;
+
+    }
+
+    .card-content{
+
+      padding:20px;
+      text-align:center;
+
+    }
+
+    .card-content h3{
+
+      color:white;
+      margin-bottom:10px;
+
+    }
+
+    .card-content p{
+
+      color:white;
+      font-size:14px;
+      line-height:1.6;
+
+    }
+
+    .card-content .btn{
+
+      margin-top:15px;
+
+    }
+
+    /* ================= PETA ================= */
+
+    .judul-peta{
+
+      margin-top:80px;
+      margin-bottom:30px;
+
+      text-align:center;
+
+    }
+
+    .judul-peta h2{
+
+      color:white;
+      font-size:40px;
+
+    }
+
+    .map-section{
+
+      background:linear-gradient(to right,#b44f4f,#ff7a7a);
+
+      padding:0 70px 70px 70px;
+
+    }
+
+    #map{
+
+      width:100%;
+      height:600px;
+
+      border-radius:20px;
+
+      border:4px solid white;
+
+      overflow:hidden;
+
+      box-shadow:0 5px 15px rgba(0,0,0,0.2);
+
+    }
+
+    .label-kecamatan{
+
+      background:transparent;
+      border:none;
+      box-shadow:none;
+
+      color:black;
+
+      font-size:12px;
+      font-weight:bold;
+
+    }
+
+    .map-button{
+
+      text-align:center;
+      margin-top:30px;
+
+    }
+
+    .map-button a{
+
+      background:#a30000;
+      color:white;
+
+      text-decoration:none;
+
+      padding:12px 40px;
+
+      border-radius:50px;
+
+      font-weight:bold;
+
+      transition:0.3s;
+
+    }
+
+    .map-button a:hover{
+
+      background:red;
+
+    }
+
+    /* ================= MITIGASI ================= */
+
+    .mitigasi-section{
+
+      width:100%;
+
+      background:#ff1111;
+
+      padding:60px 0;
+
+      text-align:center;
+
+    }
+
+    .mitigasi-btn{
+
+      background:white;
+      color:black;
+
+      text-decoration:none;
+
+      padding:18px 45px;
+
+      border-radius:15px;
+
+      font-size:28px;
+      font-weight:bold;
+
+      transition:0.3s;
+
+    }
+
+    .mitigasi-btn:hover{
+
+      background:#ffe6e6;
+      transform:scale(1.05);
+
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer{
+
+      background:black;
+      color:white;
+
+      text-align:center;
+
+      padding:20px;
+
+      font-size:13px;
+
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media(max-width:900px){
+
+      header{
+
+        flex-direction:column;
+        gap:20px;
+
+      }
+
+      .profil-container{
+
+        flex-direction:column;
+
+      }
+
+      .profil-container img{
+
+        width:100%;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+
+  <header>
+
+    <div class="logo-area">
+
+      <!-- LOGO UNILA -->
+
+      <img src="img/logounilaaaa.png">
+
+      <!-- LOGO FKIP -->
+
+      <img src="img/logofkipunilaa.png">
+
+      <!-- LOGO GEO UNILA -->
+
+      <img src="img/logogeounilaa.png">
+
+      <div class="logo-text">
+
+        FAKULTAS KEGURUAN DAN ILMU PENDIDIKAN <br>
+        PENDIDIKAN GEOGRAFI
+
+      </div>
+
+    </div>
+
+    <nav>
+
+      <ul>
+
+        <li><a href="">Home</a></li>
+        <li><a href="Profil.html">Profil</a></li>
+        <li><a href="Popup Informasi.html">Informasi</a></li>
+
+      </ul>
+
+    </nav>
+
+  </header>
+
+  <!-- ================= BANNER ================= -->
+
+  <section class="banner"></section>
+
+  <!-- ================= PROFIL ================= -->
+
+  <section class="profil">
+
+    <div class="profil-container">
+
+      <img src="img/tanggamus gambar.jpeg">
+
+      <div class="profil-text">
+
+        <h2>PROFIL TANGGAMUS</h2>
+
+        <p>
+
+          Kabupaten Tanggamus merupakan salah satu kabupaten
+          di Provinsi Lampung yang memiliki potensi alam,
+          wisata, dan sumber daya yang melimpah.
+
+          Wilayah ini dikenal dengan Gunung Tanggamus
+          sebagai ikon daerah serta memiliki kondisi geografis
+          yang beragam.
+
+        </p>
+
+        <p>
+
+          Melalui WebGIS Sebaran Bencana Kabupaten Tanggamus 2025,
+          informasi kebencanaan dapat disajikan secara spasial
+          untuk mendukung mitigasi, kesiapsiagaan,
+          dan pengambilan keputusan secara efektif.
+
+        </p>
+
+        <a href="deskripsitgms.html" class="btn">Read More</a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= BENCANA ================= -->
+
+  <section class="bencana">
+
+    <div class="card-container">
+
+      <!-- BANJIR ROB -->
+
+      <div class="card">
+
+        <img src="img/banjir rob.jpg">
+
+        <div class="card-content">
+
+          <h3>BANJIR ROB</h3>
+
+          <p>
+            Banjir rob terjadi akibat naiknya permukaan air laut.
+          </p>
+
+          <a href="banjir-rob.html" class="btn">Read More</a>
+
+        </div>
+
+      </div>
+
+      <!-- GEMPA -->
+
+      <div class="card">
+
+        <img src="img/gempabumi.jpeg">
+
+        <div class="card-content">
+
+          <h3>GEMPA BUMI</h3>
+
+          <p>
+            Gempa bumi terjadi akibat aktivitas tektonik bumi.
+          </p>
+
+          <a href="gempa-bumi.html" class="btn">Read More</a>
+
+        </div>
+
+      </div>
+
+      <!-- BANJIR BANDANG -->
+
+      <div class="card">
+
+        <img src="img/banjirbandangtgms.jpg">
+
+        <div class="card-content">
+
+          <h3>BANJIR BANDANG</h3>
+
+          <p>
+            Banjir bandang terjadi karena curah hujan tinggi.
+          </p>
+
+          <a href="banjir-bandang.html" class="btn">Read More</a>
+
+        </div>
+
+      </div>
+
+      <!-- PUTING BELIUNG -->
+
+      <div class="card">
+
+        <img src="img/putingbeliung.jpeg">
+
+        <div class="card-content">
+
+          <h3>PUTING BELIUNG</h3>
+
+          <p>
+            Puting beliung merupakan angin berputar yang kuat.
+          </p>
+
+          <a href="puting-beliung.html" class="btn">Read More</a>
+
+        </div>
+
+      </div>
+
+      <!-- LONGSOR -->
+
+      <div class="card">
+
+        <img src="img/tanah longsor.jpeg">
+
+        <div class="card-content">
+
+          <h3>TANAH LONGSOR</h3>
+
+          <p>
+            Tanah longsor terjadi akibat lereng yang tidak stabil.
+          </p>
+
+          <a href="tanah-longsor.html" class="btn">Read More</a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- JUDUL PETA -->
+
+    <div class="judul-peta">
+
+      <h2>PETA SEBARAN BENCANA</h2>
+
+    </div>
+
+  </section>
+
+  <!-- ================= MAP ================= -->
+
+  <section class="map-section">
+
+    <div id="map"></div>
+
+    <div class="map-button">
+
+      <a href="peta-lengkap.html">Read More</a>
+
+    </div>
+
+  </section>
+
+  <!-- ================= MITIGASI ================= -->
+
+  <section class="mitigasi-section">
+
+    <a href="mitigasi.html" class="mitigasi-btn">
+
+      MITIGASI BENCANA
+
+    </a>
+
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    © 2026 WebGIS Tanggamus | Website by Rensy Hidayah
+
+  </footer>
+
+  <!-- ================= LEAFLET ================= -->
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <script>
+
+    // ================= MAP =================
+
+    var map = L.map('map').setView([-5.4,104.7],9);
+
+    // ================= BASEMAP =================
+
+    L.tileLayer(
+      'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+      {
+        attribution:'&copy; OpenStreetMap'
+      }
+    ).addTo(map);
+
+    // ================= ICON =================
+
+    var floodIcon = L.icon({
+
+      iconUrl:'icons/flood.svg',
+      iconSize:[30,30]
+
+    });
+
+    var earthquakeIcon = L.icon({
+
+      iconUrl:'icons/earthquake.svg',
+      iconSize:[30,30]
+
+    });
+
+    var tornadoIcon = L.icon({
+
+      iconUrl:'icons/tornado.svg',
+      iconSize:[30,30]
+
+    });
+
+    var landslideIcon = L.icon({
+
+      iconUrl:'icons/landslide.svg',
+      iconSize:[30,30]
+
+    });
+
+    // ================= WARNA =================
+
+    function getColor(){
+
+      var colors = [
+
+        '#ff9999',
+        '#99ccff',
+        '#99ff99',
+        '#ffff99',
+        '#ffcc99'
+
+      ];
+
+      return colors[
+        Math.floor(Math.random()*colors.length)
+      ];
+
+    }
+
+    // ================= KECAMATAN =================
+
+    fetch('data/kecamatan.geojson')
+
+    .then(response => response.json())
+
+    .then(data => {
+
+      L.geoJSON(data, {
+
+        style:function(feature){
+
+          return{
+
+            color:'black',
+            weight:1,
+            fillColor:getColor(),
+            fillOpacity:0.5
+
+          }
+
+        },
+
+        onEachFeature:function(feature,layer){
+
+          layer.bindTooltip(
+
+            feature.properties["NAMOBJ"],
+
+            {
+
+              permanent:true,
+              direction:"center",
+              className:"label-kecamatan"
+
+            }
+
+          );
+
+        }
+
+      }).addTo(map);
+
+    });
+
+    // ================= TITIK BENCANA =================
+
+    fetch('data/bencana.geojson')
+
+    .then(response => response.json())
+
+    .then(data => {
+
+      L.geoJSON(data, {
+
+        pointToLayer:function(feature,latlng){
+
+          var jenis =
+          feature.properties["Jenis Bencana"];
+
+          var iconPilihan;
+
+          if(jenis == "Banjir"){
+
+            iconPilihan = floodIcon;
+
+          }
+
+          else if(jenis == "Gempa Bumi"){
+
+            iconPilihan = earthquakeIcon;
+
+          }
+
+          else if(jenis == "Puting Beliung"){
+
+            iconPilihan = tornadoIcon;
+
+          }
+
+          else if(jenis == "Tanah Longsor"){
+
+            iconPilihan = landslideIcon;
+
+          }
+
+          else{
+
+            iconPilihan = floodIcon;
+
+          }
+
+          return L.marker(latlng,{
+
+            icon:iconPilihan
+
+          });
+
+        },
+
+        onEachFeature:function(feature,layer){
+
+          var popupContent = "";
+
+          for(var key in feature.properties){
+
+            popupContent +=
+
+            "<b>" + key + ":</b> " +
+            feature.properties[key] +
+            "<br>";
+
+          }
+
+          layer.bindPopup(popupContent);
+
+        }
+
+      }).addTo(map);
+
+    });
+
+  </script>
+
+</body>
+</html>>

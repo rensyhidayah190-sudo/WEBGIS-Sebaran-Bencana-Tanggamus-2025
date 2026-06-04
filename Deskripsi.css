@@ -1,0 +1,359 @@
+/* ================= RESET & BASE ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f2f2f2;
+}
+
+/* ================= HEADER ================= */
+header {
+  width: 100%;
+  background: linear-gradient(to right, #990000, #ff1a1a);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 60px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-area img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.logo-text {
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: yellow;
+}
+
+/* ================= HERO ================= */
+.hero {
+  width: 100%;
+  min-height: 260px;
+  background: linear-gradient(135deg, #7a0000 0%, #cc0000 50%, #ff3b3b 100%);
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  padding: 50px 70px;
+  width: 100%;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+.breadcrumb a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.breadcrumb a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.breadcrumb span {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.breadcrumb .current {
+  color: white;
+  font-weight: bold;
+}
+
+.hero h1 {
+  color: white;
+  font-size: 38px;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ================= INTRO SECTION ================= */
+.intro-section {
+  background: white;
+  padding: 70px;
+}
+
+.intro-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+/* Lambang */
+.lambang-box {
+  flex-shrink: 0;
+  text-align: center;
+  background: #fff8f8;
+  border: 2px solid #ffcccc;
+  border-radius: 20px;
+  padding: 25px 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 200px;
+}
+
+.lambang-box img {
+  width: 140px;
+  height: auto;
+  object-fit: contain;
+}
+
+.lambang-caption {
+  margin-top: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #a30000;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Intro text */
+.intro-text h2 {
+  color: #b30000;
+  font-size: 30px;
+  margin-bottom: 18px;
+}
+
+.intro-text p {
+  color: #444;
+  line-height: 2;
+  text-align: justify;
+  margin-bottom: 14px;
+}
+
+/* ================= SECTION TITLE ================= */
+.section-title {
+  text-align: center;
+  font-size: 30px;
+  color: #b30000;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.section-title.white {
+  color: white;
+}
+
+/* ================= POTENSI SECTION ================= */
+.potensi-section {
+  background: #f9f9f9;
+  padding: 70px;
+}
+
+.potensi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 25px;
+}
+
+.potensi-card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px 22px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid #cc0000;
+  transition: 0.3s;
+}
+
+.potensi-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 24px rgba(163, 0, 0, 0.18);
+}
+
+.potensi-icon {
+  font-size: 38px;
+  margin-bottom: 14px;
+}
+
+.potensi-card h3 {
+  color: #a30000;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.potensi-card p {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ================= BENCANA SECTION ================= */
+.bencana-section {
+  background: linear-gradient(to right, #7a0000, #ff3b3b);
+  padding: 70px;
+}
+
+.bencana-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+}
+
+.bencana-item {
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 14px;
+  padding: 20px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  backdrop-filter: blur(4px);
+  transition: 0.3s;
+}
+
+.bencana-item:hover {
+  background: rgba(255, 255, 255, 0.28);
+  transform: translateY(-4px);
+}
+
+.bencana-icon {
+  font-size: 26px;
+}
+
+/* ================= DESKRIPSI LENGKAP ================= */
+.deskripsi-section {
+  background: white;
+  padding: 70px;
+}
+
+.deskripsi-content {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.deskripsi-content p {
+  color: #444;
+  line-height: 2;
+  text-align: justify;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+/* Kotak callout merah */
+.callout-box {
+  background: linear-gradient(135deg, #7a0000, #cc0000);
+  border-radius: 14px;
+  padding: 28px 32px;
+  margin: 10px 0 24px;
+}
+
+.callout-box p {
+  color: white !important;
+  font-size: 15px;
+  line-height: 1.9;
+  margin: 0;
+}
+
+/* Tombol kembali */
+.back-wrap {
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  background: #a30000;
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: red;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 13px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+
+  header {
+    flex-direction: column;
+    gap: 20px;
+    padding: 16px 24px;
+  }
+
+  .hero-overlay {
+    padding: 40px 24px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .intro-section,
+  .potensi-section,
+  .bencana-section,
+  .deskripsi-section {
+    padding: 40px 24px;
+  }
+
+  .intro-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lambang-box {
+    width: 180px;
+  }
+}

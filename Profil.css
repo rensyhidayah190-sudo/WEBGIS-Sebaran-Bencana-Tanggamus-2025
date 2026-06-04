@@ -1,0 +1,171 @@
+.profil-pembuat {
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 100%;
+  min-width: 1440px;
+  min-height: 884px;
+  position: relative;
+}
+
+.profil-pembuat .group {
+  position: absolute;
+  top: -8px;
+  left: -31px;
+  width: 1479px;
+  height: 73px;
+}
+
+.profil-pembuat .rectangle {
+  top: 8px;
+  left: 31px;
+  height: 57px;
+  background: linear-gradient(
+    90deg,
+    rgba(153, 0, 0, 1) 19%,
+    rgba(255, 0, 0, 1) 100%
+  );
+  position: absolute;
+  width: 1440px;
+}
+
+.profil-pembuat .logogeounilaa {
+  position: absolute;
+  top: 8px;
+  left: 103px;
+  width: 114px;
+  height: 61px;
+  aspect-ratio: 1.78;
+  object-fit: cover;
+}
+
+.profil-pembuat .logofkipunilaa {
+  position: absolute;
+  top: 13px;
+  left: 87px;
+  width: 47px;
+  height: 47px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.profil-pembuat .logounilaaaa {
+  position: absolute;
+  top: 8px;
+  left: 31px;
+  width: 91px;
+  height: 65px;
+  aspect-ratio: 1.68;
+  object-fit: cover;
+}
+
+.profil-pembuat .line {
+  position: absolute;
+  top: 13px;
+  left: 191px;
+  width: 1px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.profil-pembuat .FAKULTAS-KEGURUAN {
+  position: absolute;
+  top: 27px;
+  left: 197px;
+  width: 303px;
+  -webkit-text-stroke: 1px #ffffff;
+  font-family: "Inria Serif-Light", Helvetica;
+  font-weight: 300;
+  color: #ee00f2;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.profil-pembuat .text-wrapper {
+  position: absolute;
+  top: 19px;
+  left: 811px;
+  font-family: "Inria Serif-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.profil-pembuat .div {
+  position: absolute;
+  top: 18px;
+  left: 1062px;
+  font-family: "Inria Serif-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.profil-pembuat .text-wrapper-2 {
+  position: absolute;
+  top: 19px;
+  left: 939px;
+  font-family: "Inria Serif-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.profil-pembuat .rensyjpg {
+  position: absolute;
+  top: 202px;
+  left: 91px;
+  width: 425px;
+  height: 425px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.profil-pembuat .NAMA-RENSY-HIDAYAH {
+  position: absolute;
+  top: 211px;
+  left: 560px;
+  font-family: "Inria Serif-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.profil-pembuat .group-2 {
+  position: absolute;
+  top: 832px;
+  left: 0;
+  width: 1443px;
+  height: 52px;
+}
+
+.profil-pembuat .img {
+  top: 0;
+  left: 0;
+  height: 52px;
+  position: absolute;
+  width: 1440px;
+}
+
+.profil-pembuat .p {
+  position: absolute;
+  top: 15px;
+  left: 536px;
+  font-family: "IBM Plex Sans Thai-ExtraLight", Helvetica;
+  font-weight: 200;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}

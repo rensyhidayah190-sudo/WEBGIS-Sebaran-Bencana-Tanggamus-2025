@@ -1,0 +1,238 @@
+
+    <!DOCTYPE html>
+<html>
+<head>
+  <title>WebGIS Bencana</title>
+
+  <link rel="stylesheet"
+  href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+  <style>
+    #map {
+      height: 100vh;
+      width: 100%;
+    }
+
+    .label-kecamatan {
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      color: black;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+
+// ======================
+// MEMBUAT PETA
+// ======================
+
+var map = L.map('map').setView([-5.4, 104.7], 9);
+
+
+// ======================
+// BASEMAP
+// ======================
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap'
+}).addTo(map);
+
+
+// ======================
+// ICON BENCANA
+// ======================
+
+var floodIcon = L.icon({
+    iconUrl: 'icons/flood.svg',
+    iconSize: [30, 30]
+});
+
+var earthquakeIcon = L.icon({
+    iconUrl: 'icons/earthquake.svg',
+    iconSize: [30, 30]
+});
+
+var tornadoIcon = L.icon({
+    iconUrl: 'icons/tornado.svg',
+    iconSize: [30, 30]
+});
+
+var windyIcon = L.icon({
+    iconUrl: 'icons/windy.svg',
+    iconSize: [30, 30]
+});
+
+var drowningIcon = L.icon({
+    iconUrl: 'icons/drowning.svg',
+    iconSize: [30, 30]
+});
+
+var tsunamiIcon = L.icon({
+    iconUrl: 'icons/tsunami.svg',
+    iconSize: [30, 30]
+});
+
+var landslideIcon = L.icon({
+    iconUrl: 'icons/landslide.svg',
+    iconSize: [30, 30]
+});
+
+
+// ======================
+// FUNGSI WARNA
+// ======================
+
+function getColor() {
+
+    var colors = [
+        '#ff9999',
+        '#99ccff',
+        '#99ff99',
+        '#ffff99',
+        '#ffcc99',
+        '#cc99ff',
+        '#ffb3e6'
+    ];
+
+    return colors[Math.floor(Math.random() * colors.length)];
+
+}
+
+
+// ======================
+// LAYER KECAMATAN
+// ======================
+
+fetch('data/kecamatan.geojson')
+.then(response => response.json())
+.then(data => {
+
+    L.geoJSON(data, {
+
+        // STYLE WARNA
+        style: function(feature) {
+
+            return {
+                color: 'black',
+                weight: 1,
+                fillColor: getColor(),
+                fillOpacity: 0.5
+            };
+
+        },
+
+        // LABEL KECAMATAN
+        onEachFeature: function(feature, layer) {
+
+            layer.bindTooltip(
+
+                feature.properties["NAMOBJ"],
+
+                {
+                    permanent: true,
+                    direction: "center",
+                    className: "label-kecamatan"
+                }
+
+            );
+
+        }
+
+    }).addTo(map);
+
+});
+
+
+// ======================
+// LAYER TITIK BENCANA
+// ======================
+
+fetch('data/bencana.geojson')
+.then(response => response.json())
+.then(data => {
+
+    L.geoJSON(data, {
+
+        // MENENTUKAN ICON
+        pointToLayer: function(feature, latlng) {
+
+            var jenis = feature.properties["Jenis Bencana"];
+
+            var iconPilihan;
+
+            if (jenis == "Banjir") {
+                iconPilihan = floodIcon;
+            }
+
+            else if (jenis == "Gempa Bumi") {
+                iconPilihan = earthquakeIcon;
+            }
+
+            else if (jenis == "Puting Beliung") {
+                iconPilihan = tornadoIcon;
+            }
+
+            else if (jenis == "Cuaca Ekstrem") {
+                iconPilihan = windyIcon;
+            }
+
+            else if (jenis == "KKM (Tenggelam)") {
+                iconPilihan = drowningIcon;
+            }
+
+            else if (jenis == "Banjir ROB") {
+                iconPilihan = tsunamiIcon;
+            }
+
+            else if (jenis == "Tanah Longsor") {
+                iconPilihan = landslideIcon;
+            }
+
+            else {
+                iconPilihan = floodIcon;
+            }
+
+            return L.marker(latlng, {
+                icon: iconPilihan
+            });
+
+        },
+
+
+        // POPUP SEMUA ATRIBUT
+        onEachFeature: function(feature, layer) {
+
+            var popupContent = "";
+
+            for (var key in feature.properties) {
+
+                popupContent +=
+                    "<b>" + key + ":</b> " +
+                    feature.properties[key] +
+                    "<br>";
+
+            }
+
+            layer.bindPopup(popupContent);
+
+        }
+
+    }).addTo(map);
+
+});
+
+</script>
+
+</body>
+</html>

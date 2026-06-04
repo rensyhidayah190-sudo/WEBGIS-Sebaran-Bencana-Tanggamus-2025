@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peta Sebaran Bencana – WebGIS Tanggamus</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body { background: #f2f2f2; }
+
+    /* ===== HEADER ===== */
+    header {
+      width: 100%;
+      background: linear-gradient(to right, #990000, #ff1a1a);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 60px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-area img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+    }
+
+    .logo-text {
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 1.5;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 40px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover { color: yellow; }
+
+    /* ===== HERO ===== */
+    .hero {
+      width: 100%;
+      background: linear-gradient(to right, #990000, #ff1a1a);
+      padding: 40px 60px;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+      font-size: 13px;
+    }
+
+    .breadcrumb a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .breadcrumb span { color: rgba(255,255,255,0.5); }
+    .breadcrumb .current { color: white; font-weight: bold; }
+
+    .hero h1 {
+      color: white;
+      font-size: 34px;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+
+    .hero p {
+      color: rgba(255,255,255,0.85);
+      font-size: 14px;
+    }
+
+    /* ===== KONTEN ===== */
+    .peta-section {
+      padding: 40px 60px;
+      background: white;
+    }
+
+    /* ===== FILTER ===== */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+      align-items: center;
+    }
+
+    .filter-bar span {
+      font-weight: bold;
+      color: #a30000;
+      font-size: 14px;
+    }
+
+    .filter-btn {
+      padding: 8px 18px;
+      border-radius: 50px;
+      border: 2px solid #cc0000;
+      background: white;
+      color: #cc0000;
+      font-weight: bold;
+      font-size: 13px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .filter-btn.aktif,
+    .filter-btn:hover {
+      background: #cc0000;
+      color: white;
+    }
+
+    /* ===== MAP ===== */
+    #map {
+      width: 100%;
+      height: 600px;
+      border-radius: 20px;
+      border: 4px solid #cc0000;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+
+    .label-kecamatan {
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      color: black;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    /* ===== LEGENDA ===== */
+    .legenda {
+      background: #fff5f5;
+      border: 2px solid #ffcccc;
+      border-radius: 16px;
+      padding: 25px 30px;
+      margin-bottom: 20px;
+    }
+
+    .legenda h3 {
+      color: #a30000;
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+
+    .legenda-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .legenda-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .legenda-item img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+    }
+
+    /* ===== ZONA WARNA ===== */
+    .zona-section {
+      background: #fff5f5;
+      border: 2px solid #ffcccc;
+      border-radius: 16px;
+      padding: 25px 30px;
+      margin-bottom: 30px;
+    }
+
+    .zona-section h3 {
+      color: #a30000;
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+
+    .zona-grid {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .zona-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .zona-color {
+      width: 30px;
+      height: 20px;
+      border-radius: 4px;
+      border: 1px solid rgba(0,0,0,0.2);
+    }
+
+    /* ===== TOMBOL ===== */
+    .back-wrap { text-align: center; margin-top: 10px; }
+
+    .btn {
+      display: inline-block;
+      background: #a30000;
+      color: white;
+      padding: 12px 30px;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: bold;
+      transition: 0.3s;
+      font-size: 15px;
+    }
+
+    .btn:hover { background: red; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      header {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px 20px;
+      }
+      .hero { padding: 30px 20px; }
+      .peta-section { padding: 30px 20px; }
+      #map { height: 400px; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="logo-area">
+      <img src="img/logounilaaaa.png" alt="Logo Unila">
+      <img src="img/logofkipunilaa.png" alt="Logo FKIP">
+      <img src="img/logogeounilaa.png" alt="Logo Geo">
+      <div class="logo-text">
+        FAKULTAS KEGURUAN DAN ILMU PENDIDIKAN <br>
+        PENDIDIKAN GEOGRAFI
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Profil.html">Profil</a></li>
+        <li><a href="Popup Informasi.html">Informasi</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span class="current">Peta Sebaran Bencana</span>
+    </div>
+    <h1>🗺️ PETA SEBARAN BENCANA</h1>
+    <p>Kabupaten Tanggamus 2025 — Pemetaan wilayah rawan bencana secara interaktif</p>
+  </section>
+
+  <!-- ===== PETA SECTION ===== -->
+  <section class="peta-section">
+
+    <!-- FILTER -->
+    <div class="filter-bar">
+      <span>Filter Bencana :</span>
+      <button class="filter-btn aktif" id="btn-semua"        onclick="filterBencana('Semua')">🗂️ Semua</button>
+      <button class="filter-btn"       id="btn-banjir"       onclick="filterBencana('Banjir')">🌊 Banjir</button>
+      <button class="filter-btn"       id="btn-gempa"        onclick="filterBencana('Gempa Bumi')">🌏 Gempa Bumi</button>
+      <button class="filter-btn"       id="btn-puting"       onclick="filterBencana('Puting Beliung')">🌪️ Puting Beliung</button>
+      <button class="filter-btn"       id="btn-longsor"      onclick="filterBencana('Tanah Longsor')">⛰️ Tanah Longsor</button>
+    </div>
+
+    <!-- MAP -->
+    <div id="map"></div>
+
+    <!-- LEGENDA IKON -->
+    <div class="legenda">
+      <h3>📌 LEGENDA TITIK BENCANA</h3>
+      <div class="legenda-grid">
+        <div class="legenda-item">
+          <img src="icons/flood.svg" alt="Banjir">
+          <span>Banjir / Banjir Rob / Banjir Bandang</span>
+        </div>
+        <div class="legenda-item">
+          <img src="icons/earthquake.svg" alt="Gempa">
+          <span>Gempa Bumi</span>
+        </div>
+        <div class="legenda-item">
+          <img src="icons/tornado.svg" alt="Puting Beliung">
+          <span>Puting Beliung</span>
+        </div>
+        <div class="legenda-item">
+          <img src="icons/landslide.svg" alt="Longsor">
+          <span>Tanah Longsor</span>
+        </div>
+        <div class="legenda-item">
+          <img src="icons/sea.svg" alt="Gelombang">
+          <span>Gelombang / Tsunami</span>
+        </div>
+        <div class="legenda-item">
+          <img src="icons/drowning.svg" alt="Tenggelam">
+          <span>Tenggelam</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ZONA WARNA -->
+    <div class="zona-section">
+      <h3>🎨 KETERANGAN WARNA KECAMATAN</h3>
+      <div class="zona-grid">
+        <div class="zona-item">
+          <div class="zona-color" style="background:#ff9999;"></div>
+          <span>Zona 1</span>
+        </div>
+        <div class="zona-item">
+          <div class="zona-color" style="background:#99ccff;"></div>
+          <span>Zona 2</span>
+        </div>
+        <div class="zona-item">
+          <div class="zona-color" style="background:#99ff99;"></div>
+          <span>Zona 3</span>
+        </div>
+        <div class="zona-item">
+          <div class="zona-color" style="background:#ffff99;"></div>
+          <span>Zona 4</span>
+        </div>
+        <div class="zona-item">
+          <div class="zona-color" style="background:#ffcc99;"></div>
+          <span>Zona 5</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOMBOL KEMBALI -->
+    <div class="back-wrap">
+      <a href="index.html" class="btn">&#8592; Kembali ke Beranda</a>
+    </div>
+
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    &copy; 2025 WebGIS Tanggamus | Website by Rensy Hidayah
+  </footer>
+
+  <!-- ===== LEAFLET JS ===== -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <script>
+
+    // ===== MAP =====
+    var map = L.map('map').setView([-5.4, 104.7], 9);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap'
+    }).addTo(map);
+
+    // ===== ICON =====
+    var floodIcon = L.icon({ iconUrl: 'icons/flood.svg', iconSize: [32, 32] });
+    var earthquakeIcon = L.icon({ iconUrl: 'icons/earthquake.svg', iconSize: [32, 32] });
+    var tornadoIcon = L.icon({ iconUrl: 'icons/tornado.svg', iconSize: [32, 32] });
+    var landslideIcon = L.icon({ iconUrl: 'icons/landslide.svg', iconSize: [32, 32] });
+    var seaIcon = L.icon({ iconUrl: 'icons/sea.svg', iconSize: [32, 32] });
+    var drowningIcon = L.icon({ iconUrl: 'icons/drowning.svg', iconSize: [32, 32] });
+    var windyIcon = L.icon({ iconUrl: 'icons/windy.svg', iconSize: [32, 32] });
+    var warningIcon = L.icon({ iconUrl: 'icons/warning.svg', iconSize: [32, 32] });
+
+    // ===== WARNA KECAMATAN =====
+    var colors = ['#ff9999','#99ccff','#99ff99','#ffff99','#ffcc99'];
+    var colorIndex = 0;
+    var colorMap = {};
+
+    function getColor(nama) {
+      if (!colorMap[nama]) {
+        colorMap[nama] = colors[colorIndex % colors.length];
+        colorIndex++;
+      }
+      return colorMap[nama];
+    }
+
+    // ===== LAYER BENCANA =====
+    var allMarkers = [];
+    var bencanaLayer = L.layerGroup().addTo(map);
+
+    // ===== KECAMATAN =====
+    fetch('Data/kecamatan.geojson')
+      .then(r => r.json())
+      .then(data => {
+        L.geoJSON(data, {
+          style: function(feature) {
+            return {
+              color: 'black',
+              weight: 1,
+              fillColor: getColor(feature.properties["NAMOBJ"]),
+              fillOpacity: 0.5
+            };
+          },
+          onEachFeature: function(feature, layer) {
+            layer.bindTooltip(
+              feature.properties["NAMOBJ"],
+              { permanent: true, direction: "center", className: "label-kecamatan" }
+            );
+          }
+        }).addTo(map);
+      });
+
+    // ===== TITIK BENCANA =====
+    fetch('Data/bencana.geojson')
+      .then(r => r.json())
+      .then(data => {
+
+        data.features.forEach(function(feature) {
+
+          var jenis = feature.properties["Jenis Bencana"];
+          var iconPilihan;
+
+          if (jenis === "Banjir" || jenis === "Banjir Rob" || jenis === "Banjir Bandang") {
+            iconPilihan = floodIcon;
+          } else if (jenis === "Gempa Bumi") {
+            iconPilihan = earthquakeIcon;
+          } else if (jenis === "Puting Beliung") {
+            iconPilihan = tornadoIcon;
+          } else if (jenis === "Tanah Longsor") {
+            iconPilihan = landslideIcon;
+          } else if (jenis === "Tsunami" || jenis === "Gelombang Pasang") {
+            iconPilihan = seaIcon;
+          } else if (jenis === "Tenggelam") {
+            iconPilihan = drowningIcon;
+          } else if (jenis === "Angin Kencang") {
+            iconPilihan = windyIcon;
+          } else {
+            iconPilihan = warningIcon;
+          }
+
+          var latlng = L.latLng(
+            feature.geometry.coordinates[1],
+            feature.geometry.coordinates[0]
+          );
+
+          var marker = L.marker(latlng, { icon: iconPilihan });
+
+          var popupContent = "<div style='font-size:13px; line-height:1.9; min-width:180px;'>";
+          for (var key in feature.properties) {
+            popupContent += "<b>" + key + ":</b> " + feature.properties[key] + "<br>";
+          }
+          popupContent += "</div>";
+
+          marker.bindPopup(popupContent);
+          marker.jenisBencana = jenis;
+
+          allMarkers.push(marker);
+          bencanaLayer.addLayer(marker);
+
+        });
+
+      });
+
+    // ===== FUNGSI FILTER =====
+    function filterBencana(jenis) {
+
+      // Reset semua tombol
+      document.querySelectorAll('.filter-btn').forEach(function(btn) {
+        btn.classList.remove('aktif');
+      });
+
+      // Aktifkan tombol yang diklik
+      var idMap = {
+        'Semua': 'btn-semua',
+        'Banjir': 'btn-banjir',
+        'Gempa Bumi': 'btn-gempa',
+        'Puting Beliung': 'btn-puting',
+        'Tanah Longsor': 'btn-longsor'
+      };
+      document.getElementById(idMap[jenis]).classList.add('aktif');
+
+      // Kosongkan layer
+      bencanaLayer.clearLayers();
+
+      // Tambah marker sesuai filter
+      allMarkers.forEach(function(marker) {
+        var j = marker.jenisBencana;
+        if (jenis === 'Semua') {
+          bencanaLayer.addLayer(marker);
+        } else if (jenis === 'Banjir' && (j === 'Banjir' || j === 'Banjir Rob' || j === 'Banjir Bandang')) {
+          bencanaLayer.addLayer(marker);
+        } else if (j === jenis) {
+          bencanaLayer.addLayer(marker);
+        }
+      });
+
+    }
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+"type": "FeatureCollection",
+"name": "bencana",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "No": 1, "Jenis Bencana": "Cuaca Ekstrem", "Kecamatan": "Gunung Alip", "Desa": "Sukabanjar", "Lintang": -5.4805, "Bujur": 104.5852 }, "geometry": { "type": "Point", "coordinates": [ 104.5852, -5.4805 ] } },
+{ "type": "Feature", "properties": { "No": 2, "Jenis Bencana": "Banjir Bandang", "Kecamatan": "Cukuh Balak", "Desa": "Suka Padang", "Lintang": -5.7482, "Bujur": 105.2103 }, "geometry": { "type": "Point", "coordinates": [ 105.2103, -5.7482 ] } },
+{ "type": "Feature", "properties": { "No": 3, "Jenis Bencana": "Cuaca Ekstrem", "Kecamatan": "Gisting", "Desa": "Sidokaton", "Lintang": -5.3987, "Bujur": 104.6765 }, "geometry": { "type": "Point", "coordinates": [ 104.6765, -5.3987 ] } },
+{ "type": "Feature", "properties": { "No": 4, "Jenis Bencana": "Musibah Kebakaran", "Kecamatan": "Semaka", "Desa": "Sukaraja", "Lintang": -5.5601, "Bujur": 104.5588 }, "geometry": { "type": "Point", "coordinates": [ 104.5588, -5.5601 ] } },
+{ "type": "Feature", "properties": { "No": 5, "Jenis Bencana": "Musibah Kebakaran", "Kecamatan": "Sumberejo", "Desa": "Dadapan", "Lintang": -5.4172, "Bujur": 104.6214 }, "geometry": { "type": "Point", "coordinates": [ 104.6214, -5.4172 ] } },
+{ "type": "Feature", "properties": { "No": 6, "Jenis Bencana": "Banjir", "Kecamatan": "Bandar Negeri Semuong", "Desa": "Gunung Doh", "Lintang": -5.6723, "Bujur": 104.7921 }, "geometry": { "type": "Point", "coordinates": [ 104.7921, -5.6723 ] } },
+{ "type": "Feature", "properties": { "No": 7, "Jenis Bencana": "Banjir", "Kecamatan": "Ulu Belu", "Desa": "Sinar Banten", "Lintang": -5.3215, "Bujur": 104.7026 }, "geometry": { "type": "Point", "coordinates": [ 104.7026, -5.3215 ] } },
+{ "type": "Feature", "properties": { "No": 8, "Jenis Bencana": "Musibah Kebakaran", "Kecamatan": "Pulau Panggung", "Desa": "Gedung Agung", "Lintang": -5.2894, "Bujur": 104.6432 }, "geometry": { "type": "Point", "coordinates": [ 104.6432, -5.2894 ] } },
+{ "type": "Feature", "properties": { "No": 9, "Jenis Bencana": "KKM (Tenggelam)", "Kecamatan": "Kelumbayan", "Desa": "Umbar", "Lintang": -5.7568, "Bujur": 105.0984 }, "geometry": { "type": "Point", "coordinates": [ 105.0984, -5.7568 ] } },
+{ "type": "Feature", "properties": { "No": 10, "Jenis Bencana": "Banjir", "Kecamatan": "Kotaagung Timur", "Desa": "Suka Banjar", "Lintang": -5.4702, "Bujur": 104.6345 }, "geometry": { "type": "Point", "coordinates": [ 104.6345, -5.4702 ] } },
+{ "type": "Feature", "properties": { "No": 11, "Jenis Bencana": "Banjir", "Kecamatan": "Cukuh Balak", "Desa": "Sukapadang", "Lintang": -5.7421, "Bujur": 105.2056 }, "geometry": { "type": "Point", "coordinates": [ 105.2056, -5.7421 ] } },
+{ "type": "Feature", "properties": { "No": 12, "Jenis Bencana": "Cuaca Ekstrem", "Kecamatan": "Kotaagung Barat", "Desa": "Kalimiring", "Lintang": -5.4628, "Bujur": 104.6023 }, "geometry": { "type": "Point", "coordinates": [ 104.6023, -5.4628 ] } },
+{ "type": "Feature", "properties": { "No": 13, "Jenis Bencana": "Banjir dan Tanah Longsor", "Kecamatan": "Pugung", "Desa": "Sukamaju", "Lintang": -5.5224, "Bujur": 104.7312 }, "geometry": { "type": "Point", "coordinates": [ 104.7312, -5.5224 ] } },
+{ "type": "Feature", "properties": { "No": 14, "Jenis Bencana": "Puting Beliung", "Kecamatan": "Cukuh Balak", "Desa": "Pekon Doh", "Lintang": -5.7515, "Bujur": 105.2154 }, "geometry": { "type": "Point", "coordinates": [ 105.2154, -5.7515 ] } },
+{ "type": "Feature", "properties": { "No": 15, "Jenis Bencana": "Banjir dan Tanah Longsor", "Kecamatan": "Kelumbayan", "Desa": "Paku", "Lintang": -5.7683, "Bujur": 105.1127 }, "geometry": { "type": "Point", "coordinates": [ 105.1127, -5.7683 ] } },
+{ "type": "Feature", "properties": { "No": 16, "Jenis Bencana": "Tanah Longsor", "Kecamatan": "Kotaagung", "Desa": "Teratas", "Lintang": -5.4659, "Bujur": 104.6268 }, "geometry": { "type": "Point", "coordinates": [ 104.6268, -5.4659 ] } },
+{ "type": "Feature", "properties": { "No": 17, "Jenis Bencana": "Banjir ROB", "Kecamatan": "Wonosobo", "Desa": "Karang Anyar", "Lintang": -5.6012, "Bujur": 104.6451 }, "geometry": { "type": "Point", "coordinates": [ 104.6451, -5.6012 ] } },
+{ "type": "Feature", "properties": { "No": 18, "Jenis Bencana": "KKM (Tenggelam)", "Kecamatan": "Pugung", "Desa": "Tanjung Kemala", "Lintang": -5.5307, "Bujur": 104.7425 }, "geometry": { "type": "Point", "coordinates": [ 104.7425, -5.5307 ] } },
+{ "type": "Feature", "properties": { "No": 19, "Jenis Bencana": "Banjir ROB", "Kecamatan": "Kotaagung", "Desa": "Kapuran", "Lintang": -5.4668, "Bujur": 104.6299 }, "geometry": { "type": "Point", "coordinates": [ 104.6299, -5.4668 ] } },
+{ "type": "Feature", "properties": { "No": 20, "Jenis Bencana": "Tanah Longsor", "Kecamatan": "Bulok", "Desa": "Sukaagung", "Lintang": -5.5403, "Bujur": 104.6894 }, "geometry": { "type": "Point", "coordinates": [ 104.6894, -5.5403 ] } },
+{ "type": "Feature", "properties": { "No": 21, "Jenis Bencana": "Banjir dan Tanah Longsor", "Kecamatan": "Bulok", "Desa": "Sukaagung", "Lintang": -5.5403, "Bujur": 104.6894 }, "geometry": { "type": "Point", "coordinates": [ 104.6894, -5.5403 ] } },
+{ "type": "Feature", "properties": { "No": 22, "Jenis Bencana": "Banjir dan Tanah Longsor", "Kecamatan": "Pugung", "Desa": "Tanjung Agung", "Lintang": -5.5289, "Bujur": 104.7358 }, "geometry": { "type": "Point", "coordinates": [ 104.7358, -5.5289 ] } },
+{ "type": "Feature", "properties": { "No": 23, "Jenis Bencana": "Gempa Bumi", "Kecamatan": "Sidodadi", "Desa": "Semaka", "Lintang": -5.5592, "Bujur": 104.5521 }, "geometry": { "type": "Point", "coordinates": [ 104.5521, -5.5592 ] } }
+]
+}

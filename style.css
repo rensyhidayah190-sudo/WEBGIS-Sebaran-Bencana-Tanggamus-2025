@@ -1,0 +1,1557 @@
+
+.home {
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 100%;
+  min-width: 1442px;
+  min-height: 2727px;
+  position: relative;
+}
+
+.home .rectangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1440px;
+  height: 57px;
+  background: linear-gradient(
+    90deg,
+    rgba(153, 0, 0, 1) 19%,
+    rgba(255, 0, 0, 1) 100%
+  );
+}
+
+.home .logogeounilaa {
+  position: absolute;
+  top: 0;
+  left: 72px;
+  width: 114px;
+  height: 61px;
+  aspect-ratio: 1.78;
+  object-fit: cover;
+}
+
+.home .logofkipunilaa {
+  position: absolute;
+  top: 5px;
+  left: 56px;
+  width: 47px;
+  height: 47px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.home .logounilaaaa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 91px;
+  height: 65px;
+  aspect-ratio: 1.68;
+  object-fit: cover;
+}
+
+.home .line {
+  position: absolute;
+  top: 5px;
+  left: 160px;
+  width: 1px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.home .FAKULTAS-KEGURUAN {
+  position: absolute;
+  top: 19px;
+  left: 166px;
+  width: 303px;
+  -webkit-text-stroke: 1px #ffffff;
+  font-family: "Inria Serif-Light", Helvetica;
+  font-weight: 300;
+  color: #ee00f2;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .text-wrapper {
+  position: absolute;
+  top: 11px;
+  left: 780px;
+  font-family: "Inria Serif-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.home .div {
+  position: absolute;
+  top: 10px;
+  left: 1031px;
+  font-family: "Inria Serif-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.home .text-wrapper-2 {
+  top: 11px;
+  left: 908px;
+  font-family: "Inria Serif-Bold", Helvetica;
+  color: #ffffff;
+  font-size: 20px;
+  white-space: nowrap;
+  position: absolute;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .cuplikan-layar {
+  position: absolute;
+  top: 51px;
+  left: 0;
+  width: 1441px;
+  height: 534px;
+  aspect-ratio: 2.7;
+  object-fit: cover;
+}
+
+.home .img {
+  position: absolute;
+  top: 648px;
+  left: 36px;
+  width: 288px;
+  height: 184px;
+}
+
+.home .text-wrapper-3 {
+  top: 630px;
+  left: 348px;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  color: #860606;
+  font-size: 24px;
+  position: absolute;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .text-wrapper-4 {
+  position: absolute;
+  top: 1214px;
+  left: 129px;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  font-weight: 700;
+  color: #860606;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .p {
+  position: absolute;
+  top: 670px;
+  left: 348px;
+  width: 1033px;
+  font-family: "IBM Plex Sans Thai-Light", Helvetica;
+  font-weight: 300;
+  color: #990000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .rectangle-2 {
+  position: absolute;
+  top: 926px;
+  left: -7px;
+  width: 1443px;
+  height: 1185px;
+  background: linear-gradient(
+    90deg,
+    rgba(134, 7, 7, 1) 35%,
+    rgba(255, 56, 60, 1) 100%
+  );
+  background-color: var(--colors-accents-red);
+}
+
+.home .rectangle-3 {
+  position: absolute;
+  top: 952px;
+  left: 30px;
+  width: 259px;
+  height: 330px;
+  background-color: #ffdddd59;
+  border-radius: 20px;
+}
+
+.home .rectangle-4 {
+  position: absolute;
+  top: 1342px;
+  left: 1px;
+  width: 1440px;
+  height: 769px;
+  background-color: #ffdddd59;
+  border-radius: 20px;
+}
+
+.home .rectangle-5 {
+  position: absolute;
+  top: 952px;
+  left: 309px;
+  width: 259px;
+  height: 330px;
+  background-color: #ffdddd59;
+  border-radius: 20px;
+}
+
+.home .rectangle-6 {
+  position: absolute;
+  top: 954px;
+  left: 589px;
+  width: 259px;
+  height: 330px;
+  background-color: #ffdddd59;
+  border-radius: 20px;
+}
+
+.home .rectangle-7 {
+  position: absolute;
+  top: 954px;
+  left: 866px;
+  width: 259px;
+  height: 330px;
+  background-color: #ffdddd59;
+  border-radius: 20px;
+}
+
+.home .rectangle-8 {
+  position: absolute;
+  top: 954px;
+  left: 1153px;
+  width: 259px;
+  height: 330px;
+  background-color: #ffdddd59;
+  border-radius: 20px;
+}
+
+.home .rectangle-9 {
+  position: absolute;
+  top: 971px;
+  left: 43px;
+  width: 229px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.home .rectangle-10 {
+  position: absolute;
+  top: 1450px;
+  left: 108px;
+  width: 1213px;
+  height: 553px;
+  background-color: #020101;
+  border-radius: 20px;
+  border: 7px solid;
+  border-color: #fafafa;
+}
+
+.home .rectangle-11 {
+  position: absolute;
+  top: 971px;
+  left: 324px;
+  width: 229px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.home .rectangle-12 {
+  position: absolute;
+  top: 971px;
+  left: 602px;
+  width: 229px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.home .rectangle-13 {
+  position: absolute;
+  top: 971px;
+  left: 885px;
+  width: 229px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.home .rectangle-14 {
+  position: absolute;
+  top: 971px;
+  left: 1167px;
+  width: 229px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.home .text-wrapper-5 {
+  left: 101px;
+  position: absolute;
+  top: 1167px;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .text-wrapper-6 {
+  position: absolute;
+  top: 1167px;
+  left: 363px;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .text-wrapper-7 {
+  left: 620px;
+  position: absolute;
+  top: 1167px;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .text-wrapper-8 {
+  position: absolute;
+  top: 1354px;
+  left: 468px;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .text-wrapper-9 {
+  position: absolute;
+  top: 1167px;
+  left: 899px;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .text-wrapper-10 {
+  position: absolute;
+  top: 1167px;
+  left: 1183px;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .rectangle-15 {
+  position: absolute;
+  top: 1210px;
+  left: 79px;
+  width: 162px;
+  height: 44px;
+  background-color: #990000;
+  border-radius: 25px;
+  box-shadow: 0px 4px 4px #00000040;
+}
+
+.home .text-wrapper-11 {
+  position: absolute;
+  top: 1214px;
+  left: 111px;
+  width: 130px;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .rectangle-16 {
+  position: absolute;
+  top: 1209px;
+  left: 358px;
+  width: 162px;
+  height: 44px;
+  background-color: #990000;
+  border-radius: 25px;
+  box-shadow: 0px 4px 4px #00000040;
+}
+
+.home .text-wrapper-12 {
+  top: 1211px;
+  left: 390px;
+  width: 130px;
+  font-size: 20px;
+  position: absolute;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .rectangle-17 {
+  position: absolute;
+  top: 1207px;
+  left: 634px;
+  width: 162px;
+  height: 44px;
+  background-color: #990000;
+  border-radius: 25px;
+  box-shadow: 0px 4px 4px #00000040;
+}
+
+.home .text-wrapper-13 {
+  top: 1211px;
+  left: 666px;
+  width: 130px;
+  font-size: 20px;
+  position: absolute;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .rectangle-18 {
+  position: absolute;
+  top: 1209px;
+  left: 920px;
+  width: 162px;
+  height: 44px;
+  background-color: #990000;
+  border-radius: 25px;
+  box-shadow: 0px 4px 4px #00000040;
+}
+
+.home .text-wrapper-14 {
+  top: 1213px;
+  left: 952px;
+  width: 130px;
+  font-size: 20px;
+  position: absolute;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .rectangle-19 {
+  position: absolute;
+  top: 789px;
+  left: 337px;
+  width: 162px;
+  height: 44px;
+  background-color: #990000;
+  border-radius: 25px;
+  box-shadow: 0px 4px 4px #00000040;
+}
+
+.home .rectangle-20 {
+  position: absolute;
+  top: 2033px;
+  left: 636px;
+  width: 162px;
+  height: 44px;
+  background-color: #990000;
+  border-radius: 25px;
+  box-shadow: 0px 4px 4px #00000040;
+}
+
+.home .rectangle-21 {
+  position: absolute;
+  top: 2026px;
+  left: 542px;
+  width: 360px;
+  height: 65px;
+  background-color: #990000;
+  border-radius: 25px;
+  box-shadow: 0px 4px 4px #00000040;
+}
+
+.home .rectangle-22 {
+  position: absolute;
+  top: 1210px;
+  left: 1194px;
+  width: 162px;
+  height: 44px;
+  background-color: #990000;
+  border-radius: 25px;
+  box-shadow: 0px 4px 4px #00000040;
+}
+
+.home .text-wrapper-15 {
+  top: 795px;
+  left: 363px;
+  width: 130px;
+  font-size: 20px;
+  position: absolute;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .text-wrapper-16 {
+  top: 2033px;
+  left: 649px;
+  width: 217px;
+  font-size: 32px;
+  position: absolute;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .text-wrapper-17 {
+  top: 1214px;
+  left: 1226px;
+  width: 130px;
+  font-size: 20px;
+  position: absolute;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .rectangle-23 {
+  position: absolute;
+  top: 2675px;
+  left: 0;
+  width: 1441px;
+  height: 52px;
+}
+
+.home .text-wrapper-18 {
+  position: absolute;
+  top: 2274px;
+  left: 542px;
+  font-family: "IBM Plex Sans Thai-ExtraLight", Helvetica;
+  font-weight: 200;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .text-wrapper-19 {
+  position: absolute;
+  top: 2686px;
+  left: 499px;
+  font-family: "IBM Plex Sans Thai-ExtraLight", Helvetica;
+  font-weight: 200;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .rectangle-24 {
+  position: absolute;
+  top: 2219px;
+  left: 0;
+  width: 1436px;
+  height: 240px;
+  background-color: #ff0000;
+}
+
+.home .rectangle-25 {
+  position: absolute;
+  top: 2304px;
+  left: 499px;
+  width: 453px;
+  height: 89px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0px 4px 4px #00000040;
+}
+
+.home .text-wrapper-20 {
+  position: absolute;
+  top: 2316px;
+  left: 532px;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+.deskripsi-tanggamus {
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 100%;
+  min-width: 1440px;
+  min-height: 1370px;
+  position: relative;
+}
+
+.deskripsi-tanggamus .rectangle {
+  height: 1443px;
+  background: linear-gradient(
+    90deg,
+    rgba(134, 7, 7, 1) 35%,
+    rgba(255, 56, 60, 1) 100%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1440px;
+  background-color: var(--colors-accents-red);
+}
+
+.deskripsi-tanggamus .div {
+  position: absolute;
+  top: 235px;
+  left: 107px;
+  width: 1226px;
+  height: 1076px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 7px solid;
+  border-color: #fafafa;
+}
+
+.deskripsi-tanggamus .secara-administratif {
+  position: absolute;
+  top: 579px;
+  left: 207px;
+  width: 1025px;
+  font-family: "IBM Plex Sans Thai-Light", Helvetica;
+  font-weight: 300;
+  color: #990000;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.deskripsi-tanggamus .logo-tanggamus {
+  position: absolute;
+  top: 279px;
+  left: 609px;
+  width: 221px;
+  height: 300px;
+  aspect-ratio: 0.74;
+  object-fit: cover;
+}
+
+.deskripsi-tanggamus .rectangle-2 {
+  height: 57px;
+  background: linear-gradient(
+    90deg,
+    rgba(153, 0, 0, 1) 19%,
+    rgba(255, 0, 0, 1) 100%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1440px;
+}
+
+.deskripsi-tanggamus .logogeounilaa {
+  position: absolute;
+  top: 0;
+  left: 72px;
+  width: 114px;
+  height: 61px;
+  aspect-ratio: 1.78;
+  object-fit: cover;
+}
+
+.deskripsi-tanggamus .logofkipunilaa {
+  position: absolute;
+  top: 5px;
+  left: 56px;
+  width: 47px;
+  height: 47px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.deskripsi-tanggamus .logounilaaaa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 91px;
+  height: 65px;
+  aspect-ratio: 1.68;
+  object-fit: cover;
+}
+
+.deskripsi-tanggamus .line {
+  position: absolute;
+  top: 5px;
+  left: 160px;
+  width: 1px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.deskripsi-tanggamus .FAKULTAS-KEGURUAN {
+  position: absolute;
+  top: 19px;
+  left: 166px;
+  width: 303px;
+  -webkit-text-stroke: 1px #ffffff;
+  font-family: "Inria Serif-Light", Helvetica;
+  font-weight: 300;
+  color: #ee00f2;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.deskripsi-tanggamus .text-wrapper {
+  position: absolute;
+  top: 11px;
+  left: 780px;
+  font-family: "Inria Serif-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.deskripsi-tanggamus .text-wrapper-2 {
+  position: absolute;
+  top: 10px;
+  left: 1031px;
+  font-family: "Inria Serif-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.deskripsi-tanggamus .text-wrapper-3 {
+  position: absolute;
+  top: 11px;
+  left: 908px;
+  font-family: "Inria Serif-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+=======
+.home {
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 100%;
+  min-width: 1442px;
+  min-height: 2727px;
+  position: relative;
+}
+
+.home .rectangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1440px;
+  height: 57px;
+  background: linear-gradient(
+    90deg,
+    rgba(153, 0, 0, 1) 19%,
+    rgba(255, 0, 0, 1) 100%
+  );
+}
+
+.home .logogeounilaa {
+  position: absolute;
+  top: 0;
+  left: 72px;
+  width: 114px;
+  height: 61px;
+  aspect-ratio: 1.78;
+  object-fit: cover;
+}
+
+.home .logofkipunilaa {
+  position: absolute;
+  top: 5px;
+  left: 56px;
+  width: 47px;
+  height: 47px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.home .logounilaaaa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 91px;
+  height: 65px;
+  aspect-ratio: 1.68;
+  object-fit: cover;
+}
+
+.home .line {
+  position: absolute;
+  top: 5px;
+  left: 160px;
+  width: 1px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.home .FAKULTAS-KEGURUAN {
+  position: absolute;
+  top: 19px;
+  left: 166px;
+  width: 303px;
+  -webkit-text-stroke: 1px #ffffff;
+  font-family: "Inria Serif-Light", Helvetica;
+  font-weight: 300;
+  color: #ee00f2;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .text-wrapper {
+  position: absolute;
+  top: 11px;
+  left: 780px;
+  font-family: "Inria Serif-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.home .div {
+  position: absolute;
+  top: 10px;
+  left: 1031px;
+  font-family: "Inria Serif-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.home .text-wrapper-2 {
+  top: 11px;
+  left: 908px;
+  font-family: "Inria Serif-Bold", Helvetica;
+  color: #ffffff;
+  font-size: 20px;
+  white-space: nowrap;
+  position: absolute;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .cuplikan-layar {
+  position: absolute;
+  top: 51px;
+  left: 0;
+  width: 1441px;
+  height: 534px;
+  aspect-ratio: 2.7;
+  object-fit: cover;
+}
+
+.home .img {
+  position: absolute;
+  top: 648px;
+  left: 36px;
+  width: 288px;
+  height: 184px;
+}
+
+.home .text-wrapper-3 {
+  top: 630px;
+  left: 348px;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  color: #860606;
+  font-size: 24px;
+  position: absolute;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .text-wrapper-4 {
+  position: absolute;
+  top: 1214px;
+  left: 129px;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  font-weight: 700;
+  color: #860606;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .p {
+  position: absolute;
+  top: 670px;
+  left: 348px;
+  width: 1033px;
+  font-family: "IBM Plex Sans Thai-Light", Helvetica;
+  font-weight: 300;
+  color: #990000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .rectangle-2 {
+  position: absolute;
+  top: 926px;
+  left: -7px;
+  width: 1443px;
+  height: 1185px;
+  background: linear-gradient(
+    90deg,
+    rgba(134, 7, 7, 1) 35%,
+    rgba(255, 56, 60, 1) 100%
+  );
+  background-color: var(--colors-accents-red);
+}
+
+.home .rectangle-3 {
+  position: absolute;
+  top: 952px;
+  left: 30px;
+  width: 259px;
+  height: 330px;
+  background-color: #ffdddd59;
+  border-radius: 20px;
+}
+
+.home .rectangle-4 {
+  position: absolute;
+  top: 1342px;
+  left: 1px;
+  width: 1440px;
+  height: 769px;
+  background-color: #ffdddd59;
+  border-radius: 20px;
+}
+
+.home .rectangle-5 {
+  position: absolute;
+  top: 952px;
+  left: 309px;
+  width: 259px;
+  height: 330px;
+  background-color: #ffdddd59;
+  border-radius: 20px;
+}
+
+.home .rectangle-6 {
+  position: absolute;
+  top: 954px;
+  left: 589px;
+  width: 259px;
+  height: 330px;
+  background-color: #ffdddd59;
+  border-radius: 20px;
+}
+
+.home .rectangle-7 {
+  position: absolute;
+  top: 954px;
+  left: 866px;
+  width: 259px;
+  height: 330px;
+  background-color: #ffdddd59;
+  border-radius: 20px;
+}
+
+.home .rectangle-8 {
+  position: absolute;
+  top: 954px;
+  left: 1153px;
+  width: 259px;
+  height: 330px;
+  background-color: #ffdddd59;
+  border-radius: 20px;
+}
+
+.home .rectangle-9 {
+  position: absolute;
+  top: 971px;
+  left: 43px;
+  width: 229px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.home .rectangle-10 {
+  position: absolute;
+  top: 1450px;
+  left: 108px;
+  width: 1213px;
+  height: 553px;
+  background-color: #020101;
+  border-radius: 20px;
+  border: 7px solid;
+  border-color: #fafafa;
+}
+
+.home .rectangle-11 {
+  position: absolute;
+  top: 971px;
+  left: 324px;
+  width: 229px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.home .rectangle-12 {
+  position: absolute;
+  top: 971px;
+  left: 602px;
+  width: 229px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.home .rectangle-13 {
+  position: absolute;
+  top: 971px;
+  left: 885px;
+  width: 229px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.home .rectangle-14 {
+  position: absolute;
+  top: 971px;
+  left: 1167px;
+  width: 229px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.home .text-wrapper-5 {
+  left: 101px;
+  position: absolute;
+  top: 1167px;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .text-wrapper-6 {
+  position: absolute;
+  top: 1167px;
+  left: 363px;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .text-wrapper-7 {
+  left: 620px;
+  position: absolute;
+  top: 1167px;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .text-wrapper-8 {
+  position: absolute;
+  top: 1354px;
+  left: 468px;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .text-wrapper-9 {
+  position: absolute;
+  top: 1167px;
+  left: 899px;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .text-wrapper-10 {
+  position: absolute;
+  top: 1167px;
+  left: 1183px;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .rectangle-15 {
+  position: absolute;
+  top: 1210px;
+  left: 79px;
+  width: 162px;
+  height: 44px;
+  background-color: #990000;
+  border-radius: 25px;
+  box-shadow: 0px 4px 4px #00000040;
+}
+
+.home .text-wrapper-11 {
+  position: absolute;
+  top: 1214px;
+  left: 111px;
+  width: 130px;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .rectangle-16 {
+  position: absolute;
+  top: 1209px;
+  left: 358px;
+  width: 162px;
+  height: 44px;
+  background-color: #990000;
+  border-radius: 25px;
+  box-shadow: 0px 4px 4px #00000040;
+}
+
+.home .text-wrapper-12 {
+  top: 1211px;
+  left: 390px;
+  width: 130px;
+  font-size: 20px;
+  position: absolute;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .rectangle-17 {
+  position: absolute;
+  top: 1207px;
+  left: 634px;
+  width: 162px;
+  height: 44px;
+  background-color: #990000;
+  border-radius: 25px;
+  box-shadow: 0px 4px 4px #00000040;
+}
+
+.home .text-wrapper-13 {
+  top: 1211px;
+  left: 666px;
+  width: 130px;
+  font-size: 20px;
+  position: absolute;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .rectangle-18 {
+  position: absolute;
+  top: 1209px;
+  left: 920px;
+  width: 162px;
+  height: 44px;
+  background-color: #990000;
+  border-radius: 25px;
+  box-shadow: 0px 4px 4px #00000040;
+}
+
+.home .text-wrapper-14 {
+  top: 1213px;
+  left: 952px;
+  width: 130px;
+  font-size: 20px;
+  position: absolute;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .rectangle-19 {
+  position: absolute;
+  top: 789px;
+  left: 337px;
+  width: 162px;
+  height: 44px;
+  background-color: #990000;
+  border-radius: 25px;
+  box-shadow: 0px 4px 4px #00000040;
+}
+
+.home .rectangle-20 {
+  position: absolute;
+  top: 2033px;
+  left: 636px;
+  width: 162px;
+  height: 44px;
+  background-color: #990000;
+  border-radius: 25px;
+  box-shadow: 0px 4px 4px #00000040;
+}
+
+.home .rectangle-21 {
+  position: absolute;
+  top: 2026px;
+  left: 542px;
+  width: 360px;
+  height: 65px;
+  background-color: #990000;
+  border-radius: 25px;
+  box-shadow: 0px 4px 4px #00000040;
+}
+
+.home .rectangle-22 {
+  position: absolute;
+  top: 1210px;
+  left: 1194px;
+  width: 162px;
+  height: 44px;
+  background-color: #990000;
+  border-radius: 25px;
+  box-shadow: 0px 4px 4px #00000040;
+}
+
+.home .text-wrapper-15 {
+  top: 795px;
+  left: 363px;
+  width: 130px;
+  font-size: 20px;
+  position: absolute;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .text-wrapper-16 {
+  top: 2033px;
+  left: 649px;
+  width: 217px;
+  font-size: 32px;
+  position: absolute;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .text-wrapper-17 {
+  top: 1214px;
+  left: 1226px;
+  width: 130px;
+  font-size: 20px;
+  position: absolute;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .rectangle-23 {
+  position: absolute;
+  top: 2675px;
+  left: 0;
+  width: 1441px;
+  height: 52px;
+}
+
+.home .text-wrapper-18 {
+  position: absolute;
+  top: 2274px;
+  left: 542px;
+  font-family: "IBM Plex Sans Thai-ExtraLight", Helvetica;
+  font-weight: 200;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .text-wrapper-19 {
+  position: absolute;
+  top: 2686px;
+  left: 499px;
+  font-family: "IBM Plex Sans Thai-ExtraLight", Helvetica;
+  font-weight: 200;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .rectangle-24 {
+  position: absolute;
+  top: 2219px;
+  left: 0;
+  width: 1436px;
+  height: 240px;
+  background-color: #ff0000;
+}
+
+.home .rectangle-25 {
+  position: absolute;
+  top: 2304px;
+  left: 499px;
+  width: 453px;
+  height: 89px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0px 4px 4px #00000040;
+}
+
+.home .text-wrapper-20 {
+  position: absolute;
+  top: 2316px;
+  left: 532px;
+  font-family: "IBM Plex Sans Thai-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+.deskripsi-tanggamus {
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 100%;
+  min-width: 1440px;
+  min-height: 1370px;
+  position: relative;
+}
+
+.deskripsi-tanggamus .rectangle {
+  height: 1443px;
+  background: linear-gradient(
+    90deg,
+    rgba(134, 7, 7, 1) 35%,
+    rgba(255, 56, 60, 1) 100%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1440px;
+  background-color: var(--colors-accents-red);
+}
+
+.deskripsi-tanggamus .div {
+  position: absolute;
+  top: 235px;
+  left: 107px;
+  width: 1226px;
+  height: 1076px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 7px solid;
+  border-color: #fafafa;
+}
+
+.deskripsi-tanggamus .secara-administratif {
+  position: absolute;
+  top: 579px;
+  left: 207px;
+  width: 1025px;
+  font-family: "IBM Plex Sans Thai-Light", Helvetica;
+  font-weight: 300;
+  color: #990000;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.deskripsi-tanggamus .logo-tanggamus {
+  position: absolute;
+  top: 279px;
+  left: 609px;
+  width: 221px;
+  height: 300px;
+  aspect-ratio: 0.74;
+  object-fit: cover;
+}
+
+.deskripsi-tanggamus .rectangle-2 {
+  height: 57px;
+  background: linear-gradient(
+    90deg,
+    rgba(153, 0, 0, 1) 19%,
+    rgba(255, 0, 0, 1) 100%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1440px;
+}
+
+.deskripsi-tanggamus .logogeounilaa {
+  position: absolute;
+  top: 0;
+  left: 72px;
+  width: 114px;
+  height: 61px;
+  aspect-ratio: 1.78;
+  object-fit: cover;
+}
+
+.deskripsi-tanggamus .logofkipunilaa {
+  position: absolute;
+  top: 5px;
+  left: 56px;
+  width: 47px;
+  height: 47px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.deskripsi-tanggamus .logounilaaaa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 91px;
+  height: 65px;
+  aspect-ratio: 1.68;
+  object-fit: cover;
+}
+
+.deskripsi-tanggamus .line {
+  position: absolute;
+  top: 5px;
+  left: 160px;
+  width: 1px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.deskripsi-tanggamus .FAKULTAS-KEGURUAN {
+  position: absolute;
+  top: 19px;
+  left: 166px;
+  width: 303px;
+  -webkit-text-stroke: 1px #ffffff;
+  font-family: "Inria Serif-Light", Helvetica;
+  font-weight: 300;
+  color: #ee00f2;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.deskripsi-tanggamus .text-wrapper {
+  position: absolute;
+  top: 11px;
+  left: 780px;
+  font-family: "Inria Serif-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.deskripsi-tanggamus .text-wrapper-2 {
+  position: absolute;
+  top: 10px;
+  left: 1031px;
+  font-family: "Inria Serif-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.deskripsi-tanggamus .text-wrapper-3 {
+  position: absolute;
+  top: 11px;
+  left: 908px;
+  font-family: "Inria Serif-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+>>>>>>> 66b5a702544d06c03a895c547a1bf8da6dd5cae5

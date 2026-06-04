@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mitigasi Bencana – WebGIS Tanggamus</title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body { background: #f2f2f2; }
+
+    /* ===== HEADER ===== */
+    header {
+      width: 100%;
+      background: linear-gradient(to right, #990000, #ff1a1a);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 60px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-area img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+    }
+
+    .logo-text {
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 1.5;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 40px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover { color: yellow; }
+
+    /* ===== HERO ===== */
+    .hero {
+      width: 100%;
+      background: linear-gradient(to right, #990000, #ff1a1a);
+      padding: 50px 70px;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      font-size: 13px;
+    }
+
+    .breadcrumb a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .breadcrumb span { color: rgba(255,255,255,0.5); }
+    .breadcrumb .current { color: white; font-weight: bold; }
+
+    .hero h1 {
+      color: white;
+      font-size: 36px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .hero p {
+      color: rgba(255,255,255,0.85);
+      font-size: 15px;
+    }
+
+    /* ===== MENU SECTION ===== */
+    .menu-section {
+      background: white;
+      padding: 70px;
+    }
+
+    .menu-section h2 {
+      text-align: center;
+      color: #b30000;
+      font-size: 28px;
+      margin-bottom: 50px;
+      letter-spacing: 1px;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 900px;
+      margin: 0 auto 40px;
+    }
+
+    .menu-card {
+      background: white;
+      border-radius: 20px;
+      padding: 40px 30px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      border-top: 5px solid #cc0000;
+      text-decoration: none;
+      color: inherit;
+      transition: 0.3s;
+      display: block;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(163,0,0,0.2);
+      background: #fff5f5;
+    }
+
+    .menu-icon {
+      font-size: 55px;
+      margin-bottom: 20px;
+    }
+
+    .menu-card h3 {
+      color: #a30000;
+      font-size: 17px;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .menu-card p {
+      color: #555;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* ===== TOMBOL ===== */
+    .back-wrap { text-align: center; }
+
+    .btn {
+      display: inline-block;
+      background: #a30000;
+      color: white;
+      padding: 12px 30px;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: bold;
+      transition: 0.3s;
+      font-size: 15px;
+    }
+
+    .btn:hover { background: red; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      header {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px 20px;
+      }
+      .hero { padding: 40px 24px; }
+      .menu-section { padding: 40px 20px; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="logo-area">
+      <img src="img/logounilaaaa.png" alt="Logo Unila">
+      <img src="img/logofkipunilaa.png" alt="Logo FKIP">
+      <img src="img/logogeounilaa.png" alt="Logo Geo">
+      <div class="logo-text">
+        FAKULTAS KEGURUAN DAN ILMU PENDIDIKAN <br>
+        PENDIDIKAN GEOGRAFI
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Profil.html">Profil</a></li>
+        <li><a href="Popup Informasi.html">Informasi</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span class="current">Mitigasi Bencana</span>
+    </div>
+    <h1>🛡️ MITIGASI BENCANA</h1>
+    <p>Pilih jenis bencana untuk melihat panduan mitigasi lengkap</p>
+  </section>
+
+  <!-- ===== MENU ===== -->
+  <section class="menu-section">
+    <h2>PILIH JENIS MITIGASI</h2>
+
+    <div class="menu-grid">
+
+      <!-- Mitigasi Banjir -->
+      <a href="mitigasibanjir.html" class="menu-card">
+        <div class="menu-icon">🌊</div>
+        <h3>Mitigasi Bencana Banjir</h3>
+        <p>Langkah-langkah mitigasi sebelum, saat, dan setelah bencana banjir terjadi.</p>
+      </a>
+
+      <!-- Mitigasi Gempa -->
+      <a href="mitigasigempa.html" class="menu-card">
+        <div class="menu-icon">🌏</div>
+        <h3>Mitigasi Bencana Gempa Bumi</h3>
+        <p>Panduan lengkap menghadapi bencana gempa bumi di Kabupaten Tanggamus.</p>
+      </a>
+
+      <!-- Mitigasi Longsor -->
+      <a href="mitigasilongsor.html" class="menu-card">
+        <div class="menu-icon">⛰️</div>
+        <h3>Mitigasi Bencana Tanah Longsor</h3>
+        <p>Upaya mitigasi dan kesiapsiagaan menghadapi bencana tanah longsor.</p>
+      </a>
+
+    </div>
+
+    <div class="back-wrap">
+      <a href="index.html" class="btn">&#8592; Kembali ke Beranda</a>
+    </div>
+
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    &copy; 2025 WebGIS Tanggamus | Website by Rensy Hidayah
+  </footer>
+
+</body>
+</html>

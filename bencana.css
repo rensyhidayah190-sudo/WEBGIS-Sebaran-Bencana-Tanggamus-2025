@@ -1,0 +1,193 @@
+/* ================= RESET & BASE ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #b10303;
+}
+
+/* ================= HEADER ================= */
+header {
+  width: 100%;
+  background: linear-gradient(to right, #990000, #ff1a1a);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 60px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-area img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.logo-text {
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: yellow;
+}
+
+/* ================= HERO ================= */
+.hero {
+  width: 100%;
+  min-height: 240px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  padding: 50px 70px;
+  width: 100%;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  font-size: 13px;
+}
+
+.breadcrumb a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.breadcrumb a:hover {
+  color: rgb(97, 0, 0);
+  text-decoration: underline;
+}
+
+.breadcrumb span {
+  color: rgb(251, 251, 251);
+}
+
+.breadcrumb .current {
+  color: white;
+  font-weight: bold;
+}
+
+.hero h1 {
+  color: white;
+  font-size: 40px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  color: rgba(250, 248, 248, 0.85);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ================= POSTER SECTION ================= */
+.poster-section {
+  background: rgb(255, 255, 255);
+  padding: 60px 70px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 28px;
+  color: #b30000;
+  margin-bottom: 35px;
+  letter-spacing: 1px;
+}
+
+.poster-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.poster-wrap img {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  border: 3px solid #ef0707;
+}
+
+/* ================= TOMBOL ================= */
+.back-wrap {
+  margin-top: 10px;
+}
+
+.btn {
+  display: inline-block;
+  background: #ebebeb;
+  color: rgb(255, 255, 255);
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+.btn:hover {
+  background: red;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: black;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 20px;
+  font-size: 13px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 20px;
+  }
+
+  .hero-overlay {
+    padding: 40px 24px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .poster-section {
+    padding: 40px 20px;
+  }
+}

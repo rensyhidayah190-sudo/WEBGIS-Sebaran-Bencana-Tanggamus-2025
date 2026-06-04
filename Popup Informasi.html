@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informasi – WebGIS Tanggamus</title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #f2f2f2;
+    }
+
+    /* ================= HEADER ================= */
+    header {
+      width: 100%;
+      background: linear-gradient(to right, #990000, #ff1a1a);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 60px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-area img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+    }
+
+    .logo-text {
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 1.5;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 40px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: yellow;
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      width: 100%;
+      min-height: 220px;
+      background: linear-gradient(to right, #990000, #ff1a1a);
+      display: flex;
+      align-items: center;
+      padding: 50px 70px;
+    }
+
+    .hero h1 {
+      color: white;
+      font-size: 38px;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      color: rgba(255,255,255,0.85);
+      font-size: 15px;
+    }
+
+    /* ================= MENU INFORMASI ================= */
+    .info-section {
+      padding: 70px;
+      background: white;
+    }
+
+    .info-section h2 {
+      text-align: center;
+      color: #b30000;
+      font-size: 28px;
+      margin-bottom: 50px;
+      letter-spacing: 1px;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .menu-card {
+      background: white;
+      border-radius: 20px;
+      padding: 40px 30px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      border-top: 5px solid #cc0000;
+      text-decoration: none;
+      color: inherit;
+      transition: 0.3s;
+      display: block;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(163,0,0,0.2);
+      background: #fff5f5;
+    }
+
+    .menu-icon {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+
+    .menu-card h3 {
+      color: #a30000;
+      font-size: 18px;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    .menu-card p {
+      color: #555;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* ================= FOOTER ================= */
+    footer {
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 900px) {
+      header {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px 20px;
+      }
+
+      .hero {
+        padding: 40px 24px;
+      }
+
+      .hero h1 {
+        font-size: 26px;
+      }
+
+      .info-section {
+        padding: 40px 20px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header>
+    <div class="logo-area">
+      <img src="img/logounilaaaa.png" alt="Logo Unila">
+      <img src="img/logofkipunilaa.png" alt="Logo FKIP">
+      <img src="img/logogeounilaa.png" alt="Logo Geo">
+      <div class="logo-text">
+        FAKULTAS KEGURUAN DAN ILMU PENDIDIKAN <br>
+        PENDIDIKAN GEOGRAFI
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Profil.html">Profil</a></li>
+        <li><a href="Popup Informasi.html" class="active">Informasi</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div>
+      <h1>INFORMASI</h1>
+      <p>Pilih kategori informasi yang ingin kamu ketahui</p>
+    </div>
+  </section>
+
+  <!-- ================= MENU ================= -->
+  <section class="info-section">
+    <h2>KATEGORI INFORMASI</h2>
+
+    <div class="menu-grid">
+
+      <!-- Tentang WebGIS -->
+      <a href="tentang-webgis.html" class="menu-card">
+        <div class="menu-icon">🌐</div>
+        <h3>Tentang WebGIS</h3>
+        <p>Mengenal sistem informasi geografis berbasis web untuk pemetaan bencana Kabupaten Tanggamus.</p>
+      </a>
+
+      <!-- Tujuan Website -->
+      <a href="tujuan-webgis.html" class="menu-card">
+        <div class="menu-icon">🎯</div>
+        <h3>Tujuan Website</h3>
+        <p>Tujuan dikembangkannya WebGIS Sebaran Bencana Kabupaten Tanggamus 2025.</p>
+      </a>
+
+      <!-- Peta Interaktif -->
+      <a href="index.html#map" class="menu-card">
+        <div class="menu-icon">🗺️</div>
+        <h3>Peta Interaktif</h3>
+        <p>Lihat peta sebaran bencana secara interaktif di seluruh wilayah Kabupaten Tanggamus.</p>
+      </a>
+
+      <!-- Kabupaten Tanggamus -->
+      <a href="deskripsitgms.html" class="menu-card">
+        <div class="menu-icon">📍</div>
+        <h3>Kabupaten Tanggamus 2025</h3>
+        <p>Informasi lengkap profil dan deskripsi Kabupaten Tanggamus beserta potensinya.</p>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    &copy; 2025 WebGIS Tanggamus | Website by Rensy Hidayah
+  </footer>
+
+</body>
+</html>
